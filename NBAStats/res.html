@@ -1,0 +1,612 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html style="overflow:-moz-scrollbars-vertical;overflow-y:scroll;">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta name="keywords" content="nba球员列表,历史球员,aba球员,nba历史巨星" />
+		<meta name="description" content="stat-nba,nba球员列表,历史球员,aba球员,nba历史球星" />
+		<link href="/css/common.css" rel="stylesheet" type="text/css" />
+		<link href="/css/playerList/playerList.css" rel="stylesheet" type="text/css" />
+
+		<title>球员列表|数据nba|stat-nba|历史数据|技术统计|最全最专业中文nba数据库</title>
+
+		<script type="text/javascript">
+			function js_submit(){
+				name = document.getElementById( "inputname" ).value;
+				name = name.replace(/(^\s*)|(\s*$)/g, "");
+				if(name == "" || name == "请输入球员/教练姓名")
+				{
+					document.getElementById( "inputname" ).onfocus();
+					document.getElementById( "inputname" ).value = "请输入球员/教练姓名";
+					document.getElementById( "inputname" ).select();
+					return;
+				}
+				document.getElementById( "tform" ).submit();
+			}
+		</script>
+	</head>
+	<body>
+		<div id="page">
+			<div id="background">
+
+<script language="javascript" type="text/javascript" src="/common/jquery.js"></script>
+<div style="display:none">
+<!--	<script type="text/javascript">
+		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F102e5c22af038a553a8610096bcc8bd4' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+-->	
+	<script>
+		/*$(document).ready(function(){
+			adList = $.ajax({url:"/ad.php",async:false}).responseText.split('------');
+			
+			$("#adHengfu")[0].outerHTML = (adList[0]);
+			//$("#adCebianLeft").html(adList[1]);
+			//$("#adCebianRight").html(adList[2]);
+			//$("head").append(adList[3]);
+		 });*/
+	</script>
+</div>
+
+<div class="header" style="margin-bottom: 0px;">
+	<div class="logo">
+		<a hidefocus="true" href="/index.php"></a>
+	</div>
+	<div style="float:right;width:755px;">
+	<div class="announcement" id="announcement">
+	</div>
+	<div class="quote" id="playerQuote">
+	</div>
+	<div class="itemList">
+
+                <!-- <div class="item normal"><div class="itemTop"></div><a hidefocus="true" target="_blank" href="http://www.azhibo.com/nbazhibo">直播/视频</a></div> -->
+		<!-- <div class="item normal"><div class="itemTop"></div><a hidefocus="true" target="_blank" href="http://nba.kuaiqiu.com/">比分直播</a></div> -->
+
+		<!--  <div class="item normal"><div class="itemTop"></div><a hidefocus="true" href="/">&nbsp;&nbsp;&nbsp;&nbsp;主页&nbsp;&nbsp;&nbsp;&nbsp;</a></div> -->
+		<div class="item normal"><div class="itemTop"></div><a hidefocus="true" href="/navigator.php">网站导航</a></div>
+
+
+		
+		<div class="item currentItem"><div class="itemTop"></div><a hidefocus="true" href="/playerList.php">球员/教练</a></div>
+		
+		<div class="item normal"><div class="itemTop"></div><a hidefocus="true" href="/teamList.php">&nbsp;&nbsp;&nbsp;&nbsp;球队&nbsp;&nbsp;&nbsp;&nbsp;</a></div>
+		
+		<div class="item normal" onmouseover="$(this).find('.itemDropDown').show()"  onmouseout="$(this).find('.itemDropDown').hide()">
+			<div class="itemTop"></div>
+			<a hidefocus="true" href="/season/2018.html">赛季/赛程</a>
+			<div class="itemDropDown" style="height:90px">
+				<a href="/season/2018.html">常规赛排名</a> 
+				<a href="/playoff/2018.html">季后赛排名</a> 
+				<a href="/wper/2018.html">球队战绩排名</a> 
+				<a href="/playoffchart/2018.html">季后赛对阵表</a> 
+				<a href="/gameList_simple.html">详细赛程</a>
+			</div>
+		</div>
+
+		<div class="item normal" onmouseover="$(this).find('.itemDropDown').show()"  onmouseout="$(this).find('.itemDropDown').hide()">
+			<div class="itemTop"></div>
+			<a hidefocus="true" href="/award/item8.html">荣誉/排名</a>
+			<div class="itemDropDown" style="height:360px">
+				<a href="/award/item16.html">名人堂</a> 							
+				<a href="/award/item15.html">总冠军</a> 							
+				<a href="/award/item5.html">总决赛MVP</a> 							
+				<a href="/award/item0.html">MVP</a> 							
+				<a href="/award/item8.html">最佳阵容</a> 							
+				<a href="/award/item7.html">月最佳球员</a> 							
+				<a href="/award/item18.html">周最佳球员</a> 							
+				<a href="/award/item2.html">最佳防守球员</a> 							
+				<a href="/award/item10.html">最佳防守阵容</a> 							
+				<a href="/award/item1.html">最佳新秀</a> 							
+				<a href="/award/item9.html">最佳新秀阵容</a> 							
+				<a href="/award/item3.html">最佳第六人</a> 							
+				<a href="/award/item4.html">进步最快球员</a> 							
+				<a href="/award/item6.html">全明星MVP</a> 							
+				<a href="/award/item17.html">最佳教练</a> 							
+				<a href="/award/item12.html">全明星正赛</a> 							
+				<a>——————</a>
+				<a href="/award/item11.html">选秀顺位排名</a> 							
+				<a href="/award/item13.html">进阶数据</a> 							
+				<a href="/award/item14.html">各项数据王</a> 							
+				<a href="/award/item19.html">薪金排名</a> 							
+			</div>
+		</div>
+		<div class="item normal" onmouseover="$(this).find('.itemDropDown').show()"  onmouseout="$(this).find('.itemDropDown').hide()">
+			<div class="itemTop"></div>
+			<a hidefocus="true" href="/queryZ.php?QueryType=all&AllType=season&AT=avg&crtcol=pts&order=1">数据查询器</a>
+			<div class="itemDropDown" style="height:126px">
+				<a href="/queryZ.php?QueryType=all&AllType=season&AT=avg&crtcol=pts&order=1">球员数据</a>
+				<a href="/query_pbpZ.php">特定时刻数据</a> 
+				<a href="/query_award.php">球员荣誉</a> 
+				<a href="/query_teamZ.php?QueryType=ss&SsType=season&Formular=result_out_wdivideleftbracketresult_out_waddresult_out_lrightbracketmultiply100&crtcol=formular&order=1">球队数据</a> 
+				<a href="/query_coach.php">教练数据</a> 
+				<a href="/query_playercompare.php">球员对比</a>
+				<a href="/award/item13.html">进阶数据</a>
+			</div>
+		</div>
+                <div class="item normal"><div class="itemTop"></div><a hidefocus="true" href="/award/item13.html">进阶数据</a></div>
+
+		<div class="item normal" onmouseover="$(this).find('.itemDropDown').show()"  onmouseout="$(this).find('.itemDropDown').hide()">
+			<div class="itemTop"></div> <div style="font-size:12px">论坛功能已关闭</div>
+<!--
+			<a hidefocus="true" href="http://bbs.stat-nba.com/">&nbsp;&nbsp;&nbsp;&nbsp;论坛&nbsp;&nbsp;&nbsp;&nbsp;</a>
+			<div class="itemDropDown" style="height:54px">
+				<a href="http://bbs.stat-nba.com/forum.php?mod=forumdisplay&fid=40">黑黢黢的数据</a>
+				<a href="http://bbs.stat-nba.com/forum.php?mod=forumdisplay&fid=41">转载专区</a>
+				<a href="http://bbs.stat-nba.com/forum.php?mod=forumdisplay&fid=38">意见反馈</a>
+			</div>
+-->
+		</div>
+	</div>
+	</div>
+</div>
+        <script>
+                $.ajax(
+                {
+                        url:'/ajax/quote.php?seed='+Math.random(),
+                        async:false,
+                        success:    function(responseText, statusText, xhr, $form) {
+                                document.getElementById("playerQuote").innerHTML=responseText;
+                        }
+                })
+                $.ajax(
+                {
+                        url:'/ajax/announcement.php?seed='+Math.random(),
+                        async:false,
+                        success:    function(responseText, statusText, xhr, $form) {
+                                document.getElementById("announcement").innerHTML=responseText;
+                        }
+                })
+
+        </script>
+<div class="clear"></div>
+				<div class="searchPlayer" style="margin-bottom: 4px;">
+					<form action="./playerList.php" method="get" id="tform">
+						<div class="searchPlayer_input">
+							<div class="text">
+								<a hidefocus="true" >
+									<input id ="inputname" class="text" type="text" name="name" value ="Lebron James" onfocus="if (value =='请输入球员/教练姓名'){value =''}; this.select()" onblur="if (value ==''){value='请输入球员/教练姓名'}"/>
+								</a>
+							</div>
+							<div class="submit">
+								<a hidefocus="true"  href= "javascript:js_submit();">search</a>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="pagination" style="margin-bottom: 1px; margin-top: 4px">
+					<div>
+
+						<a hidefocus="true" class="current" href="./playerList.php?lil=0"><span>#</span></a>
+					</div>
+					<div>
+						<a hidefocus="true"  href="./playerList.php?il=A&lil=0" ><span>A</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true"  href="./playerList.php?il=B&lil=0" ><span>B</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true"  href="./playerList.php?il=C&lil=0" ><span>C</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true"  href="./playerList.php?il=D&lil=0" ><span>D</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true"  href="./playerList.php?il=E&lil=0" ><span>E</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true"  href="./playerList.php?il=F&lil=0" ><span>F</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true"  href="./playerList.php?il=G&lil=0" ><span>G</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true"  href="./playerList.php?il=H&lil=0" ><span>H</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true"  href="./playerList.php?il=I&lil=0" ><span>I</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true"  href="./playerList.php?il=J&lil=0" ><span>J</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true"  href="./playerList.php?il=K&lil=0" ><span>K</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true"  href="./playerList.php?il=L&lil=0" ><span>L</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true"  href="./playerList.php?il=M&lil=0" ><span>M</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true"  href="./playerList.php?il=N&lil=0" ><span>N</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true"  href="./playerList.php?il=O&lil=0" ><span>O</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true"  href="./playerList.php?il=P&lil=0" ><span>P</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true"  href="./playerList.php?il=Q&lil=0" ><span>Q</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true"  href="./playerList.php?il=R&lil=0" ><span>R</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true"  href="./playerList.php?il=S&lil=0" ><span>S</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true"  href="./playerList.php?il=T&lil=0" ><span>T</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true"  href="./playerList.php?il=U&lil=0" ><span>U</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true"  href="./playerList.php?il=V&lil=0" ><span>V</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true"  href="./playerList.php?il=W&lil=0" ><span>W</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true"  href="./playerList.php?il=X&lil=0" ><span>X</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true"  href="./playerList.php?il=Y&lil=0" ><span>Y</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true"  href="./playerList.php?il=Z&lil=0" ><span>Z</span></a>
+
+					</div>
+				</div>
+				<div class="lastNameIL" style="margin-top: 1px;margin-left: 15px">
+					<div>
+
+						<a hidefocus="true" class="current" href="./playerList.php?il=0"><span>#</span></a>
+					</div>
+					<div>
+						<a hidefocus="true" href="./playerList.php?il=0&lil=A" ><span>A</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true" href="./playerList.php?il=0&lil=B" ><span>B</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true" href="./playerList.php?il=0&lil=C" ><span>C</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true" href="./playerList.php?il=0&lil=D" ><span>D</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true" href="./playerList.php?il=0&lil=E" ><span>E</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true" href="./playerList.php?il=0&lil=F" ><span>F</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true" href="./playerList.php?il=0&lil=G" ><span>G</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true" href="./playerList.php?il=0&lil=H" ><span>H</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true" href="./playerList.php?il=0&lil=I" ><span>I</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true" href="./playerList.php?il=0&lil=J" ><span>J</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true" href="./playerList.php?il=0&lil=K" ><span>K</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true" href="./playerList.php?il=0&lil=L" ><span>L</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true" href="./playerList.php?il=0&lil=M" ><span>M</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true" href="./playerList.php?il=0&lil=N" ><span>N</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true" href="./playerList.php?il=0&lil=O" ><span>O</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true" href="./playerList.php?il=0&lil=P" ><span>P</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true" href="./playerList.php?il=0&lil=Q" ><span>Q</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true" href="./playerList.php?il=0&lil=R" ><span>R</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true" href="./playerList.php?il=0&lil=S" ><span>S</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true" href="./playerList.php?il=0&lil=T" ><span>T</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true" href="./playerList.php?il=0&lil=U" ><span>U</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true" href="./playerList.php?il=0&lil=V" ><span>V</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true" href="./playerList.php?il=0&lil=W" ><span>W</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true" href="./playerList.php?il=0&lil=X" ><span>X</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true" href="./playerList.php?il=0&lil=Y" ><span>Y</span></a>
+
+					</div>
+					<div>
+						<a hidefocus="true" href="./playerList.php?il=0&lil=Z" ><span>Z</span></a>
+
+					</div>
+				</div>
+				<div class="clear"></div>
+				<script type="text/javascript">    (function() {        var s = "_" + Math.random().toString(36).slice(2);        document.write('<div style="" id="' + s + '"></div>');        (window.slotbydup = window.slotbydup || []).push({            id: "u3546525",            container:  s        });    })();</script><!-- 多条广告如下脚本只需引入一次 --><script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js" async="async" defer="defer" ></script>
+
+
+				<div class="title">
+					球员搜索结果
+				</div>
+				<div class="playerList">
+					<div id="name0" class ="name">
+						<a class="allstarplayer" href="./player/1862.html"  id="cover0" hidefocus="true"  target="_blank">
+							<span>
+								勒布朗-詹姆斯/LeBron James
+							</span>
+						</a>
+					</div>
+				</div>
+				
+				
+				<div class="backgf">
+	<div class="bdf"></div>
+	<div class="bdf" style="float: right"></div>
+	<div class="fftext" style="width:620px">
+		友情链接 (<a href="/about.php#contactus" style="color: white">联系</a>) 
+		<a target="_blank" href="http://www.52waha.com">哇哈体育</a>
+		<a target="_blank" href="http://www.forshine.net">英超直播</a>
+		<a target="_blank" href="http://sports.39.net/">运动健身</a>
+		<a target="_blank" href="http://tieba.baidu.com/f?ie=utf-8&kw=nba">百度NBA吧</a>
+		<a target="_blank" href="http://www.98nba.com">NBA录像</a>
+		<a target="_blank" href="http://www.cctv5zb.com">CCTV5节目表</a>
+		<a target="_blank" href="http://www.cctv5bo.com">CCTV5在线直播</a>
+		<a target="_blank" href="http://www.102tv.cn">世界杯录像</a>
+		<a target="_blank" href="http://www.sopnba.com/">直播吧</a>
+		<a target="_blank" href="http://www.klnba.com.cn/">NBA2K14修改器</a>
+		<a target="_blank" href="http://www.glsport.cn">体育在线直播</a>
+                 <a target="_blank" href="http://www.rookie-nba.com/">NBA新秀</a>
+		
+	</div>
+	<div class="fftext" style="float: right;text-align: right;">
+		<a href="https://beian.miit.gov.cn/" target="_blank">京ICP备13012768号-1</a> ©2013 stat-nba.com, all rights reserved
+		<br/>
+		<a href="/about.php#philosophy">网站宗旨</a>
+		<a href="/about.php#faq">常见问题</a>
+		<a href="/about.php#glossary">术语解释</a>
+		<a href="/about.php#contactus">联系我们</a>
+		<!-- <a href="http://bbs.stat-nba.com/forum.php?mod=forumdisplay&fid=38">意见反馈</a> -->
+	</div>
+	<div style="float:left;width:800px;height:100px"></div>
+
+
+<div class="fixed_side" style="position:fixed;top:50px;left:0px;z-index:-99">
+
+<!--
+<script type="text/javascript">
+    /*120*600 创建于 5/1/2018 侧边栏小*/
+    var cpro_id = "u3428320";
+</script>
+<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>
+-->
+
+<!-- 百度最新广告
+<script type="text/javascript">
+    (function() {
+        var s = "_" + Math.random().toString(36).slice(2);
+        document.write('<div style="" id="' + s + '"></div>');
+        (window.slotbydup = window.slotbydup || []).push({
+            id: "u3773342",
+            container:  s
+        });
+    })();
+</script>
+-->
+
+<!-- 阿里
+<script type="text/javascript">
+        document.write('<a style="display:none!important" id="tanx-a-mm_40446862_3493334_108483700121"></a>');
+        tanx_s = document.createElement("script");
+        tanx_s.type = "text/javascript";
+        tanx_s.charset = "gbk";
+        tanx_s.id = "tanx-s-mm_40446862_3493334_108483700121";
+        tanx_s.async = true;
+        tanx_s.src = "http://p.tanx.com/ex?i=mm_40446862_3493334_108483700121";
+        tanx_h = document.getElementsByTagName("head")[0];
+        if(tanx_h)tanx_h.insertBefore(tanx_s,tanx_h.firstChild);
+</script>
+-->
+
+
+</div>
+
+
+<div class="fixed_side" style="position:fixed;top:50px;right:0px;z-index:-99">
+<!--
+<div class="_jyjv4kugwep"></div>
+<script type="text/javascript">
+    (window.slotbydup = window.slotbydup || []).push({
+        id: "u6024711",
+        container: "_jyjv4kugwep",
+        async: true
+    });
+</script>
+-->
+</div>
+
+<!--
+<div id="ad_video" class="fixed_side" style="position:fixed;top:50px;right:0px;z-index:-9999">
+
+<video controls="controls" autoplay="autoplay" width="200" muted="muted" style="z-index:-9999">
+  <source src="http://filepub.qiuzhang.com/video/百万球迷.mp4" type="video/mp4"/>
+</video>
+
+
+<p style="text-align: center;z-index:-9999;"><iframe class="video_iframe" style="z-index:-9999;" src="http://v.qq.com/iframe/player.html?vid=z0810i9p2vk&amp;width=200&amp;height=429&amp;auto=1&amp;" allowfullscreen="" frameborder="0" height="439" width="200"></iframe></p>
+
+
+<br/><a target="_blank" href="http://service.qiuzhang.com/home/AdTafficRecord?sourcetag=ad_statnba_sj" style="color:#00d6ff" >App下载地址</a>
+</div>
+-->
+
+<!--
+
+<div id="fanzhi1" class="fixed_side" style="position:fixed;top:50px;left:0px;z-index:-99">
+<a target="_blank" href="http://zhiyingcai.com.cn/module/expert/hddl/hongbao.html?sid=20180000000;z-index:-99999"><img src="./image/yakami.png"></a>
+</div>
+-->
+
+<!--
+<div id="fanzhi" class="fixed_side" style="position:fixed;top:50px;right:0px;z-index:-99">
+
+<a target="_blank" href="http://mhjpack.dj-game.cn/cdn/bcm/nba-stat/BCM_v136_i1530436440_channel22.apk"><img src="./image/fanzhi.jpg"></a>
+</div>
+-->
+
+
+<script>
+$(function () {
+if ($(".fixed_side").length > 0) {
+var offset = $(".fixed_side").offset();
+$(window).scroll(function () {
+var scrollTop = $(window).scrollTop();
+//如果距离顶部的距离小于浏览器滚动的距离，则添加fixed属性。
+if (offset.top < scrollTop) $(".fixed_side").addClass("fixed");
+//否则清除fixed的css属性
+else $(".fixed_side").removeClass("fixed");
+});}});
+</script>
+
+<script>
+var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
+// ckground').css("width", "1050px")
+
+if( isMobile.any() )
+{
+	$('#background').css("z-index", "-1050")
+	$('#fanzhi').css("z-index", "-9999")
+	$('#fanzhi1').css("z-index", "-9999")
+	$('#ad_video').css("z-index", "-9999")	
+	$('#page').css("width", "1300px")
+	$('#page').css("float", "left")
+	$('#background').css("margin", "0px 190px 0 120px")
+} else {
+	//	alert($(window).width()); 
+	if($(window).width() < 1380){
+//alert('test')
+		$('#ad_video').remove()
+	} 
+}
+
+ 
+
+//document.writeln(" 是否为移动终端: "+isMobile.any());
+</script>
+
+</div>
+
+
+                <!-- 多条广告如下脚本只需引入一次 -->
+                <script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js" async="async" defer="defer" ></script>
+
+			</div>
+		</div>
+		<div id="myhidden">
+			<img src="/css/playerList/il.png"/>
+			<img src="/css/playerList/il_current.png"/>
+			<img src="/css/playerList/il_hover.png"/>
+			<img src="/css/playerList/lil.png"/>
+			<img src="/css/playerList/lil_current.png"/>
+			<img src="/css/playerList/lil_hover.png"/>
+			<img src="/css/playerList/playerList.png"/>
+			<img src="/css/playerList/playerList_hover.png"/>
+			<img src="/css/playerList/searchPlayer_input.png"/>
+			<img src="/css/playerList/searchPlayer_submit.png"/>
+			<img src="/css/playerList/searchPlayer_submit_hover.png"/>
+		</div>
+	</body>
+</html>
